@@ -1,0 +1,21 @@
+<launch>
+
+  <!-- Robot 1 -->
+  <node pkg="evry_project_strategy" type="agent_PID_delay_multi.py"
+        name="agent_1" output="screen">
+    <param name="robot_name" value="robot_1"/>
+  </node>
+
+  <!-- Robot 2 -->
+  <node pkg="evry_project_strategy" type="agent_PID_delay_multi.py"
+        name="agent_2" output="screen">
+    <param name="robot_name" value="robot_2"/>
+  </node>
+
+  <!-- Robot 3 -->
+  <node pkg="evry_project_strategy" type="agent_PID_delay_multi.py"
+        name="agent_3" output="screen">
+    <param name="robot_name" value="robot_3"/>
+  </node>
+
+</launch>

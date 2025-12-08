@@ -131,10 +131,12 @@ def run_demo():
         print(f"{robot_name} distance to flag = ", distance)
 
         # Write here your strategy..
-        
+        # Stop the robot when it reaches the flag
+        if distance < 2:   # tolerance to avoid noise (choose 0 or 0.05)
+            print("Flag reached! Stopping robot.")
+            velocity = 0
+            angle = 0
 
-
-        
         # Finishing by publishing the desired speed. 
         # DO NOT TOUCH.
         robot.set_speed_angle(velocity, angle)

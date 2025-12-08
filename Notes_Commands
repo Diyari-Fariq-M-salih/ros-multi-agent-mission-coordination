@@ -1,0 +1,18 @@
+Rebuilding workspace:
+cd ~/catkin_ws
+catkin_make
+source devel/setup.bash
+
+Opening the world:
+roslaunch evry_project_description simu_robot.launch
+
+Running the nodes:
+source ~/catkin_ws/devel/setup.bash
+roslaunch evry_project_strategy [python file name].launch nbr_robot:=1
+
+Make a file runnable:
+chmod +x (python file name).py
+
+Running a node example:
+source ~/catkin_ws/devel/setup.bash
+roslaunch evry_project_strategy multi_agent_PID.launch nbr_robot:=3
