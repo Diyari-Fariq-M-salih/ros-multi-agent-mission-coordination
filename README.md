@@ -16,7 +16,7 @@ multi-agent coordination strategies.
 
 ### diyari.m.salih@gmail.com
 
-### jeremi XD (need to add email)
+### jeremi91750@gmail.com
 
 ---
 
