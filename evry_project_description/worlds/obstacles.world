@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.4">
+  <world name="default">
+    <gui>
+      <camera name="main_cam">
+        <pose>3.516078 -55.086330 47.829880 0 0.8 1.57</pose>
+      </camera>
+    </gui>
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://red_flag</uri>
+      <name>flag_1</name>
+      <pose>-21.21320344 21.21320344 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://green_flag</uri>
+      <name>flag_2</name>
+      <pose>21.21320344 21.21320344 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://blue_flag</uri>
+      <name>flag_3</name>
+      <pose>0 -30 0 0 0 0</pose>
+    </include>
+
+    <plugin name="dtfPlugin" filename="libdistance_to_flag_plugin.so">
+      <nbFlags>3</nbFlags>
+    </plugin>
+
+    <include>
+      <uri>model://walls_evry</uri>
+      <name>limits</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+
+    <model name='obstacle_box_1'>
+      <pose>-10 10 0.5 0 0 0</pose>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry><box><size>2 2 1</size></box></geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry><box><size>2 2 1</size></box></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name='obstacle_cylinder_1'>
+      <pose>5 5 0.5 0 0 0</pose>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry><cylinder><radius>1</radius><length>1</length></cylinder></geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry><cylinder><radius>1</radius><length>1</length></cylinder></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Bricks</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>
