@@ -2,7 +2,7 @@
 
 ### Autonomous Navigation of Three Robots in ROS1 & Gazebo
 
-This repository contains my implementation of the **Mission Coordination Lab** for the  
+This repository contains our implementation of the **Mission Coordination Lab** for the  
 **M2 Smart Aerospace & Autonomous Systems (SAAS)** program at Université Paris-Saclay.
 
 The project focuses on moving **three differential-drive robots** from their start positions  
