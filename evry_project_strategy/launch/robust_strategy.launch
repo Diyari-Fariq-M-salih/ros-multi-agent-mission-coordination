@@ -1,0 +1,22 @@
+<launch>
+    <group ns="robot_1">
+        <param name="tf_prefix" value="robot_1_tf" />
+        <node pkg="evry_project_strategy" type="robust_agent.py" name="strategy_node" output="screen">
+            <param name="robot_name" value="robot_1"/>
+        </node>
+    </group>
+
+    <group ns="robot_2">
+        <param name="tf_prefix" value="robot_2_tf" />
+        <node pkg="evry_project_strategy" type="robust_agent.py" name="strategy_node" output="screen">
+            <param name="robot_name" value="robot_2"/>
+        </node>
+    </group>
+
+    <group ns="robot_3">
+        <param name="tf_prefix" value="robot_3_tf" />
+        <node pkg="evry_project_strategy" type="robust_agent.py" name="strategy_node" output="screen">
+            <param name="robot_name" value="robot_3"/>
+        </node>
+    </group>
+</launch>
